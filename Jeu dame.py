@@ -1,6 +1,7 @@
 """
 Ce projet est un jeu de dame qui se joue avec deux joueurs 
-avec les règles classiques de ce jeu. 
+avec les règles classiques de ce jeu. Ce programme fonctionne 
+avec des classes + méthodes pour respecter le cahier des charges.
 """
 
 # importation des librairies
