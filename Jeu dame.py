@@ -1,3 +1,8 @@
+"""
+Ce projet est un jeu de dame qui se joue avec deux joueurs 
+avec les règles classiques de ce jeu. 
+"""
+
 # importation des librairies
 import pygame
 import sys
