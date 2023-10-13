@@ -1,9 +1,14 @@
+# importation des librairies
 import pygame
 import sys
+
+#définition de la taille du damier
 
 TAILLE_CASE = 80
 LARGEUR_PLATEAU = 8
 HAUTEUR_PLATEAU = 8
+
+#création de la classe pion contenant la méthode promouvoir
 
 class Pion:
     def __init__(self, couleur):
@@ -12,6 +17,8 @@ class Pion:
 
     def promouvoir(self):
         self.dame = True
+
+#Création de la classe plateau contenant la méthode [initialiser_pions; deplacer_pion; est_deplacement_valide; nombre_pions_restants]
 
 class Plateau:
     def __init__(self):
@@ -78,6 +85,7 @@ class Plateau:
 
         return pions_blancs, pions_noirs
 
+#Création de la classe JeuDeDames contenant les méthodes [afficher_plateau; gerer_evenements; boucle_principale; quitter_jeu]
 class JeuDeDames:
     def __init__(self):
         pygame.init()
