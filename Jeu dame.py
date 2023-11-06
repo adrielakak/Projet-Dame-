@@ -19,6 +19,9 @@ class Pion:  # Définit une classe pour les pions du jeu de dames.
     def promouvoir(self):  # Méthode pour promouvoir un pion en dame.
         self.dame = True  # Change le statut "dame" du pion à True.
 
+
+
+
 class Plateau:  # Définit une classe pour le plateau de jeu.
     def __init__(self):  # Constructeur de la classe Plateau.
         self.grille = [[None for _ in range(LARGEUR_PLATEAU)] for _ in range(HAUTEUR_PLATEAU)]  # Initialise la grille du plateau.
@@ -71,7 +74,7 @@ class Plateau:  # Définit une classe pour le plateau de jeu.
                 # Vérifie la validité du déplacement en fonction du type de pion (dame ou non).
         if pion.dame:
             return self.peut_manger(x1, y1, x2, y2, pion.couleur) or \
-                   (abs(x2 - x1) == abs(y2 - y1) and self.case_vide(x2, y2) and self.toutes_cases_libres(x1, y1, x2, y2))
+                   (abs(x2 - x1) == abs(y2 - y1) and self.case_vide(x2, y2) and self.toutes_cases_libres(x1, y1, x2, y2)) #  or\ permet de continuer sur la même ligne
         else:
             direction = 1 if pion.couleur == "Blanc" else -1
             if direction == 1:
@@ -120,6 +123,9 @@ class Plateau:  # Définit une classe pour le plateau de jeu.
                     pions_noirs += 1
 
         return pions_blancs, pions_noirs
+
+
+
 
 class JeuDeDames:  # Définit une classe pour le jeu de dames.
     def __init__(self):  # Constructeur de la classe JeuDeDames.
